@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfP_jhZ_gLW90gLCv5UXWUEFJiV0a7agHKjc60q86m4bPPQRNywZjSEUDooxrmDRvbWY&usqp=CAU");
+                background-repeat: no-repeat;
+                background-size:cover ;
+    } 
+    
+    
+    a:link, a:visited {
+      background-color: #e369cf;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    a:hover, a:active {
+      background-color: rgb(201, 99, 176);
+    }
+    
+    button {   
+       background-color: #4CAF50;   
+       width: 60%; height: 60px; 
+        color: rgb(9, 9, 9);   
+        padding: 10px;   
+        margin: 5px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+
+    
+    body {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 3px double rgb(15, 14, 14);
+}
+
+button {
+  height: 50px;
+  background: orange;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+}
+    
+    </style>
+    <body>  
+        <h1><center>OLIVE BEAUTY PARLOUR</center></h1>
+        <center>
+            <a href="home" >Home</a>
+            <a href="about" >About Us</a>
+            <a href="login" >Login</a>
+            <a href="services" >Services</a>
+            <a href="contact">Contact </a>
+        </center>
+            <hr> 
+            
+            <form action="reservation.php" method="post">
+                <div class="elem-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+                <div class="elem-group">
+                  <label for="email">Your E-mail</label>
+                  <input type="email" id="email" name="visitor_email" placeholder="E-mail" required>
+                </div>
+                <div class="elem-group">
+                  <label for="phone">Your Phone</label>
+                  <input type="tel" id="phone" name="visitor_phone" placeholder="(+91)" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+                </div>
+                <hr>
+                <!-- <div class="elem-group inlined">
+                  <label for="adult">Adults</label>
+                  <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+                </div>
+                <div class="elem-group inlined">
+                  <label for="child">Children</label>
+                  <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+                </div> -->
+                <div class="elem-group inlined">
+                  <label for="checkin-date">Date</label>
+                  <input type="date" id="checkin-date" name="checkin" required>
+                </div>
+                <!-- <div class="elem-group inlined">
+                  <label for="checkout-date">Check-out Date</label>
+                  <input type="date" id="checkout-date" name="checkout" required>
+                </div> -->
+                
+                <div class="elem-group">
+                
+                  <select id="room-selection" name="room_preference" required>
+                      <option value="">Mode of Payment</option>
+                      <option value="connecting">Cash</option>
+                      <option value="adjoining">Debit Card</option>
+                      <option value="adjacent">Credit Card</option>
+                      <option value="adjacent">Google Pay</option>
+                      <option value="adjacent">Phone Pay</option>
+                  </select>
+                </div>
+                <hr>
+                <div class="elem-group">
+                  <label for="message">Anything Else?</label>
+                  <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                </div>
+                <button type="submit">Book Now</button>
+              </form> 
+              <center><p>Your requirement is sent to the selected relevant businesses<br>Businesses compete with each other to get you the Special Offer<br>
+                You choose whichever suits you best<br>Contact Info sent to you by SMS/Email</p></center>
+</body>
+</html>
